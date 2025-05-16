@@ -1,0 +1,97 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.closeButton:hover {
+  background-color: rgb(207, 207, 207); /* a slightly lighter/darker shade */
+  border: none;
+  border-radius: 5px;
+
+}
+
+.playerInfo {
+  margin: 10px 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.playerName, .killsCount {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.killList {
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+
+.killItem {
+  margin: 5px 0;
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pageButton {
+  background-color: #1f0c19;
+  color: #f4e7e9;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pageButton:hover {
+  background-color: #3e1f29; /* a slightly lighter/darker shade */
+}
+
+
+.paginationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  font-size: 0.9rem;
+}

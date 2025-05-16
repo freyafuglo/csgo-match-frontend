@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap");
+
+body {
+  background-color: #f4e7e9;  /* light background */
+  color: #1f0c19;             /* dark text */
+  line-height: 1.6;
+  font-family: "M PLUS 1p", sans-serif; /*NTR, Open sans, Chicago", "MS Sans Serif", "Tahoma*/
+
+}
+
+h1, h2, h3 {
+  color: #1f0c19;
+  margin: 0.5rem 0;
+}
+
+/*button {
+  background-color: #1f0c19;
+  color: #f4e7e9;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}*/
+
+/*
+button:hover {
+  background-color: rgb(207, 207, 207); /* a slightly lighter/darker shade 
+  
+}*/
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+
+.clickableButton {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  padding: 0;          /* remove extra padding to look like a link */
+  margin: 0;           /* optional, remove if you want */
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.clickableButton:hover {
+  color: #0056b3;      /* darker blue on hover */
+  text-decoration: underline; /* keep underline on hover */
+  transform: scale(1.05);
+  
+}
+
+
+.clickableButton:active {
+  color: #003f7f;
+  transform: scale(0.95);
+}
+
+.killsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  gap: 2rem; /* space between columns */
+  margin-top: 1rem;
+}
+
+.killsColumn {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.killsColumn h4 {
+  margin-bottom: 0.5rem;
+}
+
+.clickableButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0070f3;
+  padding: 0;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.clickableButton:hover {
+  color: #0056b3; /* darker blue on hover */
+  text-decoration: underline;
+}
+
+
