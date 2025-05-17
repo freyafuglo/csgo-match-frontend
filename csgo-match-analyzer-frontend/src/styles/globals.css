@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;600;700&display=swap");
 
 body {
-  background-color: #f4e7e9;  /* light background */
-  color: #1f0c19;             /* dark text */
+  background-color:  #937a67;
+  color: #f4e7e9;             
   line-height: 1.6;
   font-family: "M PLUS 1p", sans-serif; /*NTR, Open sans, Chicago", "MS Sans Serif", "Tahoma*/
 
 }
 
 h1, h2, h3, p {
-  color: #1f0c19;
+  color: #fbf3f4;
   margin: 0.5rem 0;
 }
 
@@ -51,14 +51,15 @@ h1, h2, h3, p {
   grid-template-columns: 1fr 1fr; /* 2 equal columns */
   gap: 2rem; /* space between columns */
   margin-top: 1rem;
+  color: #fbf3f4;
 }
 
 .killsColumn {
-  background: #d4bfc5; /* Dusty Rose */
+  background: #5a3e46; 
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-  border: 1.5px solid #5a3e46; /* add this line */
+  border: 0.5px solid #f4e7e9;
 }
 
 
@@ -88,7 +89,7 @@ h1, h2, h3, p {
 
 
 .killsButton {
-  background-color: #f4e7e9;  /* light background */
+  background-color: #f4e7e9; /* light background */
   color: #1f0c19;             /* dark text */
   border: 1.25px solid #1f0c19;  /* thin border */
   border-radius: 5px;
@@ -105,6 +106,7 @@ h1, h2, h3, p {
   background-color: #e2cbd0;  /* slightly darker on hover */
   transform: scale(1.15);     /* slightly enlarge */
   box-shadow: 0 2px 8px rgba(31, 12, 25, 0.3);  /* subtle shadow */
+  font-weight: bold;
 }
 
 
@@ -151,17 +153,17 @@ h1, h2, h3, p {
 }
 
 .deathCount {
-  color: #a00;
+  color: #f4e7e9;
 }
 
 .kdaCount {
-  color: #1f0c19;
+  color: #f4e7e9;
 }
 
 
 
 .statsCard {
-  background: #d4bfc5;      /* Dusty Rose */
+  background: #1f0c19; 
   padding: 1.5rem 2rem;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.12);
@@ -175,7 +177,8 @@ h1, h2, h3, p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .statItem {
@@ -183,25 +186,45 @@ h1, h2, h3, p {
   justify-content: space-between;
   font-weight: 600;
   font-size: 1rem;
+  
 }
 
 .statLabel {
-  color: #5a3e46;
+  color: #f4e7e9;
 }
 
 .statValue {
-  color: #1f0c19;
+  color: #f4e7e9;
+  font-weight: bold;
 }
 
 .roundsWonList {
   list-style: none;
   padding-left: 0;
   font-weight: 600;
+  color: #f4e7e9;
+  margin-bottom: 2rem;
 }
 
 .roundsWonList li {
   padding: 0.3rem 0;
-  border-bottom: 1px solid #f4e7e9;
+  border-bottom: 1px solid #d4bfc5; /* Dusty Rose */
+}
+
+.roundsCount {
+  /* color: #1f0c19; Dark text for the rounds count */
+  font-weight: bold;
 }
 
 
+
+.terroristColumn {
+  background-color: #7b1e2e; /* Dark red for Terrorist */
+  color: #fff;
+}
+
+
+.ctColumn {
+  background-color: #1d3b7e; /* Dark blue for CT */
+  color: #fff;
+}

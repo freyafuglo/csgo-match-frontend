@@ -9,7 +9,7 @@
 }
 
 .modalContent {
-  background-color: white;
+  background-color: #fbf3f4;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
@@ -21,19 +21,20 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   text-align: center;
+  color: #1f0c19;
 }
 
 .closeButton {
   background: none;
   border: none;
-  color: #555;
+  color: #1f0c19;
   cursor: pointer;
   margin-bottom: 10px;
   font-size: 1rem;
 }
 
 .closeButton:hover {
-  background-color: rgb(207, 207, 207); /* a slightly lighter/darker shade */
+  background-color: #d4bfc5; /* a slightly lighter/darker shade */
   border: none;
   border-radius: 5px;
 
@@ -41,7 +42,7 @@
 
 .playerInfo {
   margin: 10px 0;
-  background-color: #f0f0f0;
+  background-color: #1f0c19; 
   padding: 10px;
   border-radius: 5px;
 }
@@ -73,9 +74,9 @@
 }
 
 .pageButton {
-  background-color: #1f0c19;
-  color: #f4e7e9;
-  padding: 0.5rem 1rem;
+  background-color: #f4e7e9;
+  color: #1f0c19;
+  padding: 0.25rem 0.5rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -83,7 +84,7 @@
 }
 
 .pageButton:hover {
-  background-color: #3e1f29; /* a slightly lighter/darker shade */
+  background-color: #e2cbd0;  /* a slightly lighter/darker shade */
 }
 
 
@@ -107,11 +108,10 @@
 .gridHeader {
   font-weight: bold;
   border-bottom: 2px solid #1f0c19;
-  padding-bottom: 0.3rem;
 }
 
 .gridItem {
   padding: 0.3rem 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #fbf3f4;
 }
 

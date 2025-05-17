@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <h1>CSGO Match Analyzer</h1>
+      <h1>CS:GO Match Analyzer</h1>
       <br></br>
       {matchData ? (
         <div className="statsCard">
@@ -71,7 +71,7 @@ export default function Home() {
               <span className="statLabel">Most Kills in a Round:</span>
               <span className="statValue">{matchData.mostKillsInRound}</span>
             </div>
-           
+
             <div className="statItem">
               <span className="statLabel">Bomb Defuses:</span>
               <span className="statValue">{matchData.bombDefuses}</span>
@@ -82,20 +82,22 @@ export default function Home() {
           <ul className="roundsWonList">
             {Object.entries(matchData.roundsWon).map(([team, rounds]) => (
               <li key={team}>
-                <strong>{team}:</strong> {rounds}
+                <strong className="teamName">{team}: </strong>
+                <span className="roundsCount">{rounds}</span>
               </li>
             ))}
           </ul>
-<br></br>
 
-          <h3>Deaths, Kills & KDA by Team</h3>
           <div className="killsGrid">
             {(["TERRORIST", "CT"] as const).map((team) => {
               const teamKills = Object.values(
                 matchData.groupedKills[team] || {}
               ).reduce((a, b) => a + b, 0);
+              const teamClass =
+                team === "TERRORIST" ? "terroristColumn" : "ctColumn";
+
               return (
-                <div key={team} className="killsColumn">
+                <div key={team} className={`killsColumn ${teamClass}`}>
                   <h4 className="killsHeading">
                     {team} - Total Kills: {teamKills}
                   </h4>
@@ -107,7 +109,7 @@ export default function Home() {
                       <span className="kdaCount">KDA</span>
                     </li>
                     {Object.entries(matchData.groupedKills[team] || {})
-                      .sort(([, killsA], [, killsB]) => killsB - killsA) // Sort descending by kills
+                      .sort(([, killsA], [, killsB]) => killsB - killsA)
                       .map(([player, kills]) => {
                         const deaths = deathsByNameAndTeam[player]?.[team] || 0;
                         const kda =
