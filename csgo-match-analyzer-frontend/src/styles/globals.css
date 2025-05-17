@@ -13,22 +13,6 @@ h1, h2, h3 {
   margin: 0.5rem 0;
 }
 
-/*button {
-  background-color: #1f0c19;
-  color: #f4e7e9;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}*/
-
-/*
-button:hover {
-  background-color: rgb(207, 207, 207); /* a slightly lighter/darker shade 
-  
-}*/
-
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -68,7 +52,7 @@ button:hover {
 }
 
 .killsColumn {
-  background: #f9f9f9;
+  background: #d4bfc5; /* Dusty Rose */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
@@ -91,6 +75,49 @@ button:hover {
 .clickableButton:hover {
   color: #0056b3; /* darker blue on hover */
   text-decoration: underline;
+}
+
+.killsHeading {
+  text-align: center;   /* Centers the text */
+  margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+
+.killsButton {
+  background-color: #f4e7e9;  /* light background */
+  color: #1f0c19;             /* dark text */
+  border: 1.25px solid #1f0c19;  /* thin border */
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;        /* small gap from player name */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 2.5rem;              /* fixed width for two-digit numbers */
+  min-width: 2.5rem;          /* ensure minimum size */
+  text-align: center;         /* center the number inside the button */
+}
+
+.killsButton:hover {
+  background-color: #e2cbd0;  /* slightly darker on hover */
+}
+
+.killsButton:active {
+  transform: scale(0.95);     /* slight shrink on click */
+}
+
+.killsList {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0.5rem;  /* Small padding to the left */
+  margin: 0.5rem 0;      /* Space between list items */
+  margin-top: 1rem;
+}
+
+.killsListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 0.25rem; /* Add some padding inside each list item */
+
 }
 
 

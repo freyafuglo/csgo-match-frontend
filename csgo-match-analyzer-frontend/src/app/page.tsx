@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="container">
       <h1>CSGO Match Analyzer</h1>
-<br></br>
+      <br></br>
       {matchData ? (
         <div className="stats">
           <h2>Match Statistics</h2>
@@ -58,29 +58,35 @@ export default function Home() {
 
               return (
                 <div key={team} className="killsColumn">
-                  <h4>
+                  <h4 className="killsHeading">
                     {team} - Total Kills: {teamKills}
                   </h4>
-                  <ul>
-                    {Object.entries(matchData.groupedKills[team] || {}).map(
-                      ([player, kills]) => (
-                        <li key={player}>
+                  <ul className="killsList">
+                    {Object.entries(matchData.groupedKills[team] || {})
+                      .sort(([, killsA], [, killsB]) => killsB - killsA) // Sort descending by kills
+                      .map(([player, kills]) => (
+                        <li
+                          key={player}
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                          }}
+                        >
+                          <span>{player}</span>
                           <button
-                            className="clickableButton"
+                            className="killsButton"
                             onClick={() => setSelectedPlayer({ team, player })}
                           >
-                            {player}: {kills}
+                            {kills}
                           </button>
                         </li>
-                      )
-                    )}
+                      ))}
                   </ul>
                 </div>
               );
             })}
           </div>
-
-         
         </div>
       ) : (
         <p>Loading match data...</p>
@@ -88,16 +94,17 @@ export default function Home() {
 
       {selectedPlayer && matchData && (
         <PlayerKillsModal
-        team={selectedPlayer.team}
-        player={selectedPlayer.player}
-        killsCount={
-          matchData.groupedKills[selectedPlayer.team]?.[selectedPlayer.player] ?? 0
-        }
-        kills={matchData.kills} // <-- pass all kills
-        isOpen={true}
-        onClose={() => setSelectedPlayer(null)}
-      />
-      
+          team={selectedPlayer.team}
+          player={selectedPlayer.player}
+          killsCount={
+            matchData.groupedKills[selectedPlayer.team]?.[
+              selectedPlayer.player
+            ] ?? 0
+          }
+          kills={matchData.kills} // <-- pass all kills
+          isOpen={true}
+          onClose={() => setSelectedPlayer(null)}
+        />
       )}
     </div>
   );
